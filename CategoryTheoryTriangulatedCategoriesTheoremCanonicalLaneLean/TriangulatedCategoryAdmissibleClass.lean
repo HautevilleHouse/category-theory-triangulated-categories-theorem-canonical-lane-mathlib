@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.CategoryTheoryTriangulatedCategoriesTheoremCanonicalLaneLean.TriangulatedCategoryStructure
+
+namespace HautevilleHouse
+namespace CategoryTheoryTriangulatedCategoriesTheoremCanonicalLaneLean
+
+structure TriangulatedAdmittedObject where
+  category : TriangulatedCategory
+  closureCondition : TriangulatedCategoryClosed category
+
+structure AdmissibleClass where
+  object : TriangulatedAdmittedObject
+  endpointSatisfied : Prop
+  remainderRecorded : Prop
+  gateWitness : endpointSatisfied ∨ remainderRecorded
+
+end CategoryTheoryTriangulatedCategoriesTheoremCanonicalLaneLean
+end HautevilleHouse
